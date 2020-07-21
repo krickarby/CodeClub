@@ -5,10 +5,14 @@ function min(a, b) {
   else return a
 }
 
-//Even Number
+//Even Number *when using == this is a boulean operator and "return true/false" is implied and not needed
 function isEven(N) {
   if (N % 2 == 0) return true;
   else return false
+}
+
+function isEven*(N) {
+  return N % 2 == 0;
 }
 
 function isEven(N) {
@@ -44,3 +48,7 @@ function countBs(string) {
     }
       return count
  } 
+
+ function countBs(string) {
+   return countChar(string, "B")
+ }
