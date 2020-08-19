@@ -32,3 +32,42 @@ function makeCouponFunction(type, discount) {
       return acc + current.price;
     }, 0)
   }
+
+//class Item
+class Item {
+  constructor (name, type, category, price) {
+    this.name = name;
+    this.type = type;
+    this.category = category;
+    this.price = price;
+  }
+  isPrime(item) {
+    if (item.type === "prime") {
+      return true
+    } else return false  
+  }
+};
+
+
+//class Coupon
+class Coupon {
+  constructor (type, discount){
+    this.type = type
+    this.discount = discount
+  }
+  applyCoupon(cart, couponFunction) {
+    cart.map(couponFunction);
+  }
+}
+
+//class Cart
+class Cart {
+  constructor (items, coupons) {
+    this.items = items
+    this.coupons = coupons
+  }
+  totalCost(cart) {
+    return cart.reduce((acc, current) => {
+      return acc + current.price;
+    }, 0)
+}
